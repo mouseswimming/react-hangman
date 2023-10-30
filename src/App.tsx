@@ -4,6 +4,7 @@ import HangmanWord from "./components/HangmanWord";
 import Keyboard from "./components/Keyboard";
 import { HangmanGraphic } from "./components/HangmanGraphic";
 import GameOver from "./components/GameOver";
+import TopConsole from "./components/TopConsole";
 
 async function getWord() {
   try {
@@ -66,6 +67,11 @@ function App() {
 
   return (
     <>
+      <TopConsole
+        newGame={newGame}
+        incorrectNum={incorrectLetters.length}
+        totalTrials={TRIALS}
+      />
       <div className="p-8 w-full max-w-screen-xl m-auto grid grid-cols-[450px_1fr] gap-8 overflow-x-hidden max-lg:grid-cols-none">
         <HangmanGraphic numberOfGuesses={incorrectLetters.length} />
         <div className="grid gap-y-8">

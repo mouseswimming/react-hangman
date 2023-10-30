@@ -1,12 +1,12 @@
-button:hover:not(:disabled),
-button:focus:not(:disabled) {
+.keyboard button:hover:not(:disabled),
+.keyboard button:focus:not(:disabled) {
   @apply bg-blue-400 text-white;
 }
 
-button.is-active {
+.keyboard button.is-active {
   @apply bg-blue-400 text-white;
 }
 
-button.is-inactive {
+.keyboard button.is-inactive {
   @apply text-gray-300 border-gray-100;
 }

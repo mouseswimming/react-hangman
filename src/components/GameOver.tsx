@@ -1,7 +1,3 @@
-import Lottie from "lottie-react";
-import ideaAnimation from "../assets/idea.json";
-import winAnimation from "../assets/winning.json";
-
 type GameOverProps = {
   isWinner: boolean;
   isLoser: boolean;
@@ -14,7 +10,7 @@ export default function GameOver({
   newGame,
 }: GameOverProps) {
   return (
-    <div className="inset-0 grid items-end justify-center bg-gradient-to-b from-black/60 to-black/90  absolute backdrop-blur-sm">
+    <div className="inset-0 grid items-end justify-center bg-gradient-to-b from-black/60 to-black/90  absolute backdrop-blur-[2px]">
       <div className="text-center max-w-max p-10 bg-white rounded-t-2xl relative shadow-[0_20px_50px_rgba(255,_255,_255,_0.7)]">
         {isWinner && (
           <>
@@ -23,11 +19,6 @@ export default function GameOver({
               Your victory tastes sweet, doesn't it? Want to savor it one more
               time?
             </p>
-            <Lottie
-              animationData={winAnimation}
-              loop={true}
-              className="h-[250px]"
-            />
           </>
         )}
         {isLoser && (
@@ -36,11 +27,6 @@ export default function GameOver({
             <p className="text-xl mb-6">
               Defeat is just a stepping stone to victory. Ready for another go?
             </p>
-            <Lottie
-              animationData={ideaAnimation}
-              loop={true}
-              className="h-[250px]"
-            />
           </>
         )}
         {(isWinner || isLoser) && (

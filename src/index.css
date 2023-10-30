@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 #root {
-  @apply grid min-h-screen items-center;
+  @apply grid min-h-screen content-center;
 }

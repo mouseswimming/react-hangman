@@ -15,7 +15,7 @@ export default function Keyboard({
   disabled = false,
 }: KeyboardProps) {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] gap-2 max-lg:grid-cols-[repeat(auto-fit,minmax(4rem,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(3rem,1fr))]">
+    <div className="keyboard grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] gap-2 max-lg:grid-cols-[repeat(auto-fit,minmax(4rem,1fr))] max-md:grid-cols-[repeat(auto-fit,minmax(3rem,1fr))]">
       {KEYS.map((key) => {
         const isActive = activeLetters.includes(key);
         const isInactive = inactiveLetters.includes(key);
